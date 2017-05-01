@@ -6,7 +6,7 @@ import uuid
 
 from networkx import shortest_path
 
-NUMBER_OF_GRAPHS_OF_EACH_TYPE = 50
+NUMBER_OF_GRAPHS_OF_EACH_TYPE = 12
 NUMBER_OF_NODES = 1000
 PROBABILITY_FACTOR = 0.15
 
