@@ -1,7 +1,6 @@
 from joblib import Parallel, delayed
 import networkx as nx
 import numpy as np
-import collections
 
 from networkx import shortest_path
 
@@ -26,8 +25,8 @@ def calculate_b_matrix(graph):
     for source_node in graph.nodes():
         path = shortest_path(graph, source_node)
         path.pop(source_node)
-        distances = [len(path[key]) for key in path.keys()]
-        for (l, k) in collections.Counter(distances).iteritems():
+        distances = {key: len(values) for (key, values) in path.iteritems()}
+        for (l, k) in distances.iteritems():
             b_matrix[k, l] += 1
 
     return b_matrix.flatten()
