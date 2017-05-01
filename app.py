@@ -4,10 +4,10 @@ import networkx as nx
 import numpy as np
 from networkx import shortest_path
 
-NUMBER_OF_GRAPHS_OF_EACH_TYPE = 12
+NUMBER_OF_GRAPHS_OF_EACH_TYPE = 15
 NUMBER_OF_NODES = 1000
-PROBABILITY_FACTORS = np.linspace(0.1,0.5,5)
-M_OR_K_PARAMS = [2,3,4,5]
+PROBABILITY_FACTORS = np.linspace(0.05,0.1,3)
+M_OR_K_PARAMS = [4,5]
 
 graphs = []
 
