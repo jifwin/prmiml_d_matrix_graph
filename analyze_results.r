@@ -2,7 +2,7 @@ library(RcppCNPy)
 library(plotrix)
 library(scatterplot3d)
 
-data = npyLoad("/home/grzegorz/agh/prmiml/graphs/results.bin.npy")
+data = npyLoad("results.bin.npy")
 
 for (i in 1:10) {
   matrix_data = matrix(data[i,], ncol=1000, byrow=TRUE)
