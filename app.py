@@ -2,7 +2,6 @@ from joblib import Parallel, delayed
 import networkx as nx
 import numpy as np
 import collections
-import uuid
 
 from networkx import shortest_path
 
