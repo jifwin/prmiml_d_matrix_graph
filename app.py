@@ -31,7 +31,8 @@ def calculate_b_matrix(graph):
         for (l, k) in collections.Counter(distances).iteritems():
             b_matrix[k, l] += 1
 
-    np.savetxt("{}.csv".format(uuid.uuid4()), b_matrix.flatten(), delimiter=",")
+    return b_matrix.flatten()
 
 
-Parallel(n_jobs=8)(delayed(calculate_b_matrix)(graph) for graph in graphs)
+results = Parallel(n_jobs=8)(delayed(calculate_b_matrix)(graph) for graph in graphs)
+np.save("results.bin", results)
